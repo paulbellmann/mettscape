@@ -1,0 +1,22 @@
+<label>
+  Mett in g Pro Person:
+  <input type="number" [formControl]="amountOfMettPerPeople">
+</label>
+
+<br>
+
+<label>
+  Brötchen Pro Person:
+  <input type="number" [formControl]="amountOfBunsPerPeople">
+</label>
+
+<br><br>
+
+<label>
+  Anzahl der Personen:
+  <input type="number" [formControl]="amountOfPeople">
+</label>
+
+<p>{{ calcAmount(amountOfPeople, amountOfBunsPerPeople) }} Brötchen</p>
+
+<p>{{ calcAmount(amountOfPeople, amountOfMettPerPeople) }}g Mett</p>
