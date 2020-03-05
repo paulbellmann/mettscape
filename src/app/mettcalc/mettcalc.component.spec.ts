@@ -1,6 +1,7 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { MettcalcComponent } from './mettcalc.component';
+import {MettcalcComponent} from './mettcalc.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 describe('MettcalcComponent', () => {
   let component: MettcalcComponent;
@@ -8,9 +9,10 @@ describe('MettcalcComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MettcalcComponent ]
+      imports: [ReactiveFormsModule],
+      declarations: [MettcalcComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
