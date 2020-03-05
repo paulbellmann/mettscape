@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl} from '@angular/forms';
-import {isNumeric} from 'rxjs/internal-compatibility';
 
 @Component({
   selector: 'app-mettcalc',
@@ -17,7 +16,7 @@ export class MettcalcComponent implements OnInit {
   }
 
   public calcAmount($input1: FormControl, $input2: FormControl): number {
-    if (isNumeric($input1.value) || isNumeric($input2.value)) {
+    if (isNaN(Number($input1.value)) || isNaN(Number($input2.value))) {
       return 0;
     }
 
