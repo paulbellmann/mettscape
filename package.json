@@ -5,8 +5,9 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:github": "ng build --prod --output-path docs --base-href /mettscape/",
+    "build-github": "ng build --prod --output-path docs --base-href /mettscape/",
     "test": "ng test",
+    "test-headless": "ng test --watch=false --browsers=ChromeHeadless",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
