@@ -1,7 +1,9 @@
-import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import {MettcalcComponent} from './mettcalc.component';
-import {FormControl, ReactiveFormsModule} from '@angular/forms';
+import { MettcalcComponent } from './mettcalc.component';
+import { FormControl, ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule, MatInputModule, MatSliderModule, MatToolbarModule } from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('MettcalcComponent', () => {
   let component: MettcalcComponent;
@@ -9,7 +11,14 @@ describe('MettcalcComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [ReactiveFormsModule],
+      imports: [
+        ReactiveFormsModule,
+        MatSliderModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatToolbarModule,
+        BrowserAnimationsModule
+      ],
       declarations: [MettcalcComponent]
     })
       .compileComponents();

@@ -1,15 +1,24 @@
-import {TestBed, async} from '@angular/core/testing';
-import {AppComponent} from './app.component';
-import {MettcalcComponent} from './mettcalc/mettcalc.component';
-import {ReactiveFormsModule} from '@angular/forms';
+import { TestBed, async } from '@angular/core/testing';
+import { AppComponent } from './app.component';
+import { MettcalcComponent } from './mettcalc/mettcalc.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule, MatInputModule, MatSliderModule, MatToolbarModule } from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [ReactiveFormsModule],
+      imports: [
+        ReactiveFormsModule,
+        MatSliderModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatToolbarModule,
+        BrowserAnimationsModule
+      ],
       declarations: [
         AppComponent,
-        MettcalcComponent
+        MettcalcComponent,
       ],
     }).compileComponents();
   }));
