@@ -1,7 +1,7 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {MettcalcComponent} from './mettcalc.component';
-import {ReactiveFormsModule} from '@angular/forms';
+import {FormControl, ReactiveFormsModule} from '@angular/forms';
 
 describe('MettcalcComponent', () => {
   let component: MettcalcComponent;
@@ -23,5 +23,19 @@ describe('MettcalcComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('calcAmount should return 0 if input is not a number', () => {
+    const input1 = new FormControl('a');
+    const input2 = new FormControl(1);
+
+    expect(component.calcAmount(input1, input2)).toBe(0);
+  });
+
+  it('calcAmount should return correct math', () => {
+    const input1 = new FormControl(2);
+    const input2 = new FormControl(3);
+
+    expect(component.calcAmount(input1, input2)).toBe(6);
   });
 });

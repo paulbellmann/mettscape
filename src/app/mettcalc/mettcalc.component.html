@@ -1,22 +1,39 @@
-<label>
-  Mett in g Pro Person:
-  <input type="number" [formControl]="amountOfMettPerPeople">
-</label>
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>Mettscape</span>
+  </mat-toolbar-row>
+</mat-toolbar>
 
-<br>
+<div class="container">
+  <h1>Calculator</h1>
 
-<label>
-  Brötchen Pro Person:
-  <input type="number" [formControl]="amountOfBunsPerPeople">
-</label>
+  <mat-form-field>
+    <mat-label>Mett in g Pro Person:</mat-label>
+    <input matInput [formControl]="amountOfMettPerPeople">
+  </mat-form-field>
 
-<br><br>
+  <br>
 
-<label>
-  Anzahl der Personen:
-  <input type="number" [formControl]="amountOfPeople">
-</label>
+  <mat-form-field>
+    <mat-label>Brötchen Pro Person:</mat-label>
+    <input matInput [formControl]="amountOfBunsPerPeople">
+  </mat-form-field>
 
-<p>{{ calcAmount(amountOfPeople, amountOfBunsPerPeople) }} Brötchen</p>
+  <br><br>
 
-<p>{{ calcAmount(amountOfPeople, amountOfMettPerPeople) }}g Mett</p>
+
+  <mat-form-field>
+    <mat-label>Anzahl der Personen:</mat-label>
+    <input matInput [formControl]="amountOfPeople">
+  </mat-form-field>
+
+
+  <p>
+    <strong>{{ calcAmount(amountOfPeople, amountOfBunsPerPeople) }}</strong> Brötchen
+  </p>
+  <p>
+    <strong>{{ calcAmount(amountOfPeople, amountOfMettPerPeople) }}g</strong> Mett
+  </p>
+
+
+</div>
